@@ -23,6 +23,7 @@
 	    return false;
 	}
 	else{
+	    // Komma mit Punkt ersetzen
 	    $_GET[$v] = str_replace(",", ".", $_GET[$v]);
 	    $_GET[$v] = floor($_GET[$v] * 10) / 10;
 	    if($_GET[$v] == 5){
@@ -35,5 +36,32 @@
 	    return floatval($_GET[$v]);
 	}
     }
+    
+    
+
+    function ausgabe($nr, $html){
+	$note = $nr->getGesamtNote();
+    
+	$savebox = file_get_contents("template/save.html");
+	$savebox = str_replace("{link}", $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] .'?'. $_SERVER['QUERY_STRING'], $savebox);
+	if($note === null){
+	    $html = str_replace("{note}", "<p>Bitte Noten eintragen</p>", $html);
+	}else if($note <= 1.3){    
+	    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Respekt!</p>" . $savebox, $html);
+	}else if($note <= 2.0){
+	    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Top!</p>" . $savebox, $html);
+	}else if($note <= 2.3){
+	    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Gute Leistung!</p>" . $savebox, $html);
+	}else if($note <= 2.7){
+	    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Ok!</p>". $savebox, $html);
+	}else{
+	    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Das geht doch besser!</p>". $savebox, $html);
+	}
+	
+	// Ausgabe, fertig
+	echo $html;
+	
+    }
+
 
 ?>

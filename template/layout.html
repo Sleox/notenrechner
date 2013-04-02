@@ -46,7 +46,8 @@
 		margin-bottom: 10px;
 	    }
 	    body form div div .form-inline .btn-primary{
-		padding-left: 26px;
+		padding-left: 21px;
+		padding-right: 15px;
 	    }
 	    input[type=text]{
 		width: 60px;
@@ -75,6 +76,15 @@
 	</div>
   
 	<hr>
+	    
+	    <p>
+		Bitte bei "Prüfung" immer die Klausur/Mündliche Prüfung eintragen und bei "Praktikum" das Praktikum.
+		Falls ein Modul kein Praktikum hat und/oder nur aus einer Prüfung oder einem Praktikum besteht, die Note
+		nur in das freie Feld eintragen.<br>
+		Es können auch beliebig Felder leer gelassen werden - Der aktuelle Notendurchschnitt wird trotzdem entsprechend
+		der derzeitigen Leistung berrechnet.
+		
+	    </p>
 	
 	    <h3>Semester 1</h3>
 	    <div class="row-fluid">
@@ -82,7 +92,7 @@
 		    <div class="span6">
 			<h4>Einführung in die Medieninformatik</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled" value="">Klausur: </div>
+			    <div class="btn btn-primary disabled" value="">Prüfung: </div>
 			    <input type="text" name="einf_mi" value="{einf_mi}" />
 			</div>
 			<div class="form-inline">
@@ -92,7 +102,7 @@
 			<hr/>
 			<h4>Programmieren 1</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="proggn1" value="{proggn1}" />
 			</div>
 			<div class="form-inline">
@@ -102,7 +112,7 @@
 			<hr/>
 			<h4>Analysis</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="analysis" value="{analysis}" />
 			</div>
 			<div class="form-inline">
@@ -114,17 +124,17 @@
 		    <div class="span6">
 			<h4>Einführung in die Gestaltung</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="einf_g" value="{einf_g}" />
 			</div>
 			<div class="form-inline">
 			    <div class="btn btn-info disabled">Praktikum: </div>
-			    <input type="text" name="einf_g_p" value="{einf_g_p}" />
+			    <input type="text" name="einf_g_p" disabled />
 			</div>
 			<hr/>
 			<h4>Grundlagen BWL</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="grund_bwl" value="{grund_bwl}" />
 			</div>
 			<div class="form-inline">
@@ -140,7 +150,7 @@
 		    <div class="span6">
 			<h4>Algorithmen und Datenstrukturen</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="ads" value="{ads}" />
 			</div>
 			<div class="form-inline">
@@ -150,7 +160,7 @@
 			<hr/>
 			<h4>Programmieren 2</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="proggn2" value="{proggn2}" />
 			</div>
 			<div class="form-inline">
@@ -160,7 +170,7 @@
 			<hr/>
 			<h4>Auszeichnungssprachen</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="ausz" value="{ausz}" />
 			</div>
 			<div class="form-inline">
@@ -172,7 +182,7 @@
 		    <div class="span6">
 			<h4>Gestaltung Elektronischer Medien</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="elek_medien" value="{elek_medien}" />
 			</div>
 			<div class="form-inline">
@@ -182,7 +192,7 @@
 			<hr/>
 			<h4>Lineare Algebra</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="la" value="{la}" />
 			</div>
 			<div class="form-inline">
@@ -192,7 +202,7 @@
 			<hr/>
 			<h4>Recht für Informatiker</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="recht" value="{recht}" />
 			</div>
 			<div class="form-inline">
@@ -208,7 +218,7 @@
 		    <div class="span6">
 			<h4>Automatentheorie und F.S.</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="afs" value="{afs}" />
 			</div>
 			<div class="form-inline">
@@ -218,7 +228,7 @@
 			<hr/>
 			<h4>Programmieren 3</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="proggn3" value="{proggn3}" />
 			</div>
 			<div class="form-inline">
@@ -228,7 +238,7 @@
 			<hr/>
 			<h4>Datenbanksysteme</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="dbs" value="{dbs}" />
 			</div>
 			<div class="form-inline">
@@ -240,7 +250,7 @@
 		    <div class="span6">
 			<h4>Animation</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="anim" value="{anim}" />
 			</div>
 			<div class="form-inline">
@@ -250,7 +260,7 @@
 			<hr/>
 			<h4>Entw. interakt. Benutzeroberflächen</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="eib" value="{eib}" />
 			</div>
 			<div class="form-inline">
@@ -260,7 +270,7 @@
 			<hr/>
 			<h4>Mathe für Informatiker</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="mfi" value="{mfi}" />
 			</div>
 			<div class="form-inline">
@@ -276,7 +286,7 @@
 		    <div class="span6">
 			<h4>Computergrafik</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="cg" value="{cg}" />
 			</div>
 			<div class="form-inline">
@@ -286,7 +296,7 @@
 			<hr/>
 			<h4>Rechnernetze und Netzprog.</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="rn" value="{rn}" />
 			</div>
 			<div class="form-inline">
@@ -296,7 +306,7 @@
 			<hr/>
 			<h4>Web-Basierte Anwendungen</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="web" value="{web}" />
 			</div>
 			<div class="form-inline">
@@ -308,7 +318,7 @@
 		    <div class="span6">
 			<h4>Mensch Computer Interaktion</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="mci" value="{mci}" />
 			</div>
 			<div class="form-inline">
@@ -318,7 +328,7 @@
 			<hr/>
 			<h4>Betriebssysteme und RA</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="bsra" value="{bsra}" />
 			</div>
 			<div class="form-inline">
@@ -328,7 +338,7 @@
 			<hr/>
 			<h4>Softwaretechnik</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="swt" value="{swt}" />
 			</div>
 			<div class="form-inline">
@@ -344,7 +354,7 @@
 		    <div class="span6">
 			<h4>Softwaretechnik Projekt</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="swtpro" value="{swtpro}" />
 			</div>
 			<div class="form-inline">
@@ -354,7 +364,7 @@
 			<hr/>
 			<h4>Fachseminar</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="fs" value="{fs}" />
 			</div>
 			<div class="form-inline">
@@ -366,7 +376,7 @@
 		    <div class="span6">
 			<h4>Liste GI</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="liste_g" value="{liste_g}" />
 			</div>
 			<div class="form-inline">
@@ -376,7 +386,7 @@
 			<hr/>
 			<h4>Liste MI</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="liste_mi" value="{liste_mi}" />
 			</div>
 			<div class="form-inline">
@@ -392,7 +402,7 @@
 		    <div class="span6">
 			<h4>Praxisprojekt</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="prakt"  disabled />
 			</div>
 			<div class="form-inline">
@@ -404,7 +414,7 @@
 		    <div class="span6">
 			<h4>Bachelor Thesis</h4>
 			<div class="form-inline">
-			    <div class="btn btn-primary disabled">Klausur: </div>
+			    <div class="btn btn-primary disabled">Prüfung: </div>
 			    <input type="text" name="thesis" value="{thesis}" />
 			</div>
 			<div class="form-inline">

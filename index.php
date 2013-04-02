@@ -8,19 +8,23 @@
  *
  */
 
+// Includes
 require_once "classes/Modul.php";
 require_once "classes/Note.php";
 require_once "classes/Notenrechner.php";
 require_once "inc/foo.inc";
 
+// Html Datei laden
 $html = file_get_contents("template/layout.html");
+
+// Notenrechner instanzieren
 $nr = new Notenrechner();
 
 // Request Semester 1
 requestModul($nr, "einf_mi", 1, 5);
 requestModul($nr, "proggn1", 1, 7);
 requestModul($nr, "analysis", 1, 5, false);
-requestModul($nr, "einf_g", 1, 8);
+requestModul($nr, "einf_g", 1, 8, false);
 requestModul($nr, "grund_bwl", 1, 5, false);
 
 
@@ -59,28 +63,7 @@ requestModul($nr, "thesis", 6, 15, false);
 
 
 // Ausgaben
-
-$note = $nr->getGesamtNote();
-
-
-$savebox = file_get_contents("template/save.html");
-$savebox = str_replace("{link}", $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] .'?'. $_SERVER['QUERY_STRING'], $savebox);
-if($note === null){
-    $html = str_replace("{note}", "<p>Bitte Noten eintragen</p>", $html);
-}else if($note <= 1.3){    
-    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Respekt!</p>" . $savebox, $html);
-}else if($note <= 2.0){
-    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Top!</p>" . $savebox, $html);
-}else if($note <= 2.3){
-    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Gute Leistung!</p>" . $savebox, $html);
-}else if($note <= 2.7){
-    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Ok!</p>". $savebox, $html);
-}else{
-    $html = str_replace("{note}", "<h1>". $note . "</h1><p>ohne gewähr</p><p>Das geht doch besser!</p>". $savebox, $html);
-}
-
-
-echo $html;
+ausgabe($nr, &$html);
 
 
 
